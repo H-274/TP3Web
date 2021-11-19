@@ -253,6 +253,10 @@ footer p {
     body {
         background-color: antiquewhite;
     }
+
+    footer {
+        display: none;
+    }
 }
 
 /*   MEDIA QUERRIES end   */
