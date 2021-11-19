@@ -15,10 +15,22 @@
 /*   ANIMATIONS end   */
 
 /*   OTHER   */
-p {
+p, figcaption {
     color: #00ff7f;
     font-size: 24px;
     font-family: 'Roboto', Arial;
+}
+
+.content p:last-child::first-letter {
+    font-size: 3em;
+    float: left;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+figcaption a {
+    color: #00ff7f;
+    font-size: 18px;
 }
 
 a {
@@ -115,7 +127,7 @@ body {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 342px;
+    left: 365px;
     padding: 10px;
     list-style-type: none;
     visibility: hidden;
@@ -128,7 +140,7 @@ body {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 583px;
+    left: 635px;
     padding: 10px;
     list-style-type: none;
     visibility: hidden;
@@ -141,7 +153,7 @@ body {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 829px;
+    left: 911px;
     padding: 10px;
     list-style-type: none;
     visibility: hidden;
@@ -186,27 +198,33 @@ body {
     margin: 10px;
 }
 
+.content a {
+    transition: text-shadow 0.25s ease-in;
+}
+
+.content a:hover {
+    text-shadow: 0px 0px 5px black;
+}
+
 .text-title {
     font-size: 30px;
     font-weight: bolder;
 }
 
-#content1 img {
-    margin-right: 15px;
+#content1 figure {
     float: left;
+    margin: 0 15px 0 0;
+    padding: 0;
 }
 
 #content2 > .text-title {
     text-align: center;
 }
 
-#content3 img {
+#content3 figure {
     float: right;
-    margin-left: 15px;
-}
-
-#content3 > .text-title {
-    text-align: right;
+    margin: 0 0 0 15px;
+    padding: 0;
 }
 
 /*   CONTENT end   */
@@ -223,6 +241,15 @@ footer p {
 }
 
 /*   FOOTER end   */
+
+/*   MEDIA QUERRIES   */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/*   MEDIA QUERRIES end   */
 
 /*
     Aide-mémoire:
@@ -493,7 +520,11 @@ footer p {
 
                 transition:
                     transition: shorthand
-                        usage: -vendeur-transition: transition_property transition_duration timing_function transition_delay, [autre transition];
+                        @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}usage: -vendeur-transition: transition_property transition_duration timing_function transition_delay, [autre transition];
                     transition-property: définit la propriété à laquelle la transition doit s’appliquer (obligatoire)
                     transition-duration: indique la durée de la transition en sec. (obligatoire)
                     transition-timing-function: définit la courbe de vitesse de notre transition (opt)
