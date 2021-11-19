@@ -243,9 +243,15 @@ footer p {
 /*   FOOTER end   */
 
 /*   MEDIA QUERRIES   */
+@media only screen and (max-width: 992px) {
+    body {
+        background-color: darkcyan;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     body {
-        background-color: lightblue;
+        background-color: antiquewhite;
     }
 }
 
