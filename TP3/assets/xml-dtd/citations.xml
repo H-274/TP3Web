@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!DOCTYPE root SYSTEM "validation.dtd">
+<root>
+    <quote>
+        <author>a</author>
+        <age>12</age>
+        <occupation>a</occupation>
+        <email>a@a.a</email>
+        <date>12 a 2021</date>
+    </quote>
+</root>
