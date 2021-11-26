@@ -14,16 +14,16 @@
 
 @keyframes img-boing {
     40% {
-        transform: scale(1.5);
+        transform: scale(1.25);
     }
     55% {
-        transform: scale(1.45);
+        transform: scale(1.235);
     }
     75% {
-        transform: scale(1.55);
+        transform: scale(1.285);
     }
     100% {
-        transform: scale(1.5)
+        transform: scale(1.25)
     }
 }
 
@@ -59,7 +59,7 @@ body {
 }
 
 #header-data-spacer {
-    height: 110px;
+    height: 10px;
 }
 
 .img-click-animation {
@@ -73,7 +73,6 @@ body {
     height: 100px;
     width: 100%;
     float: top;
-    position: fixed;
     top: 0;
     background-color: #00ff7f;
     z-index: 100;
@@ -102,7 +101,7 @@ body {
     top: 15px;
 }
 
-.header-buttons {
+.header-buttons, .dropdown a {
     display: inline;
     margin: 25px;
     width: 20%;
@@ -121,7 +120,7 @@ body {
     transition: color 0.45s linear, text-decoration 0.40s linear 0.05s;
 }
 
-.header-buttons:hover a, .header-buttons:hover {
+.header-buttons:hover a, .header-buttons:hover, .dropdown a:hover {
     color: #005555;
     text-decoration: underline #005555;
 }
@@ -129,20 +128,49 @@ body {
 #menu-toggle-button {
     display: none;
     float: right;
-    height: 50%;
+    top: 5%;
+    max-height: 75%;
 }
 
 /*Banner buttons end*/
 
 /*   BANNER end   */
 
+/*Drop-down*/
+.dropdown {
+    position: absolute;
+    width: 100%;
+    background-color: #1ac77a;
+    z-index: 100;
+    display: none;
+}
+
+.dropdown ul li {
+    padding: 10px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.dropdown a {
+    text-decoration: underline #1ac77a;
+
+    transition: color 0.45s linear, text-decoration 0.40s linear 0.05s;
+}
+
+.opened-dropdown {
+    display: block;
+}
+
+/*Drop-down end*/
+
 /*   SUB-BANNERS   */
 #menu-button > ul {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 150px;
+    left: 148px;
     padding: 10px;
+    z-index: 100;
     list-style-type: none;
     visibility: hidden;
     opacity: 0;
@@ -154,8 +182,9 @@ body {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 365px;
+    left: 335px;
     padding: 10px;
+    z-index: 100;
     list-style-type: none;
     visibility: hidden;
     opacity: 0;
@@ -167,8 +196,9 @@ body {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 635px;
+    left: 565px;
     padding: 10px;
+    z-index: 100;
     list-style-type: none;
     visibility: hidden;
     opacity: 0;
@@ -180,8 +210,9 @@ body {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 911px;
+    left: 800px;
     padding: 10px;
+    z-index: 100;
     list-style-type: none;
     visibility: hidden;
     opacity: 0;
