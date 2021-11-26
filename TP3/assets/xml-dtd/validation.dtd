@@ -1,7 +1,8 @@
 <!ELEMENT root (quote*)>
-        <!ELEMENT quote (author, age?, occupation, email*, date)>
+        <!ELEMENT quote (author, age?, occupation, email*, date?, yborn?)>
             <!ELEMENT author (#PCDATA)>
             <!ELEMENT age (#PCDATA)>
             <!ELEMENT occupation (#PCDATA)>
             <!ELEMENT email (#PCDATA)>
             <!ELEMENT date (#PCDATA)>
+            <!ELEMENT yborn (#PCDATA)>
