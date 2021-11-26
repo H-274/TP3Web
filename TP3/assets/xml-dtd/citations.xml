@@ -9,4 +9,63 @@
         <email>a@a.a</email>
         <date>12 a 2021</date>
     </quote>
+
+    <quote>
+        <author>Allan McRae</author>
+        <age>22</age>
+        <occupation>Pacman developer</occupation>
+        <email>allan@archlinux.org</email>
+        <yborn>1999</yborn>
+    </quote>
+
+    <quote>
+        <author>Andreas Radke</author>
+        <age>46</age>
+        <occupation>Package Maintainer</occupation>
+        <email>andyrtr@archlinux.org</email>
+        <yborn>1975</yborn>
+    </quote>
+
+    <quote>
+        <author>Andrew Gregory</author>
+        <age>35</age>
+        <occupation>Pacman Developer</occupation>
+        <email>andrew@archlinux.org</email>
+        <yborn>1986</yborn>
+    </quote>
+
+    <quote>
+        <author>Antonio Rojas</author>
+        <age>45</age>
+        <occupation>KDE and Math Software Packager</occupation>
+        <email>arojas@archlinux.org</email>
+        <yborn>1976</yborn>
+    </quote>
+
+    <quote>
+        <author>Jan de Groot</author>
+        <age>39</age>
+        <occupation>Package Maintainer</occupation>
+        <email>jgc@archlinux.org</email>
+        <yborn>1982</yborn>
+    </quote>
+
+    <quote>
+        <author>Johannes Löthberg</author>
+        <age>25</age>
+        <occupation>Dev, TU, and thing-doer</occupation>
+        <email>johannes@kyriasis.com</email>
+        <yborn>1996</yborn>
+    </quote>
+
+    <quote>
+        <author>Sébastien Luttringer</author>
+        <age>37</age>
+        <occupation>♈</occupation>
+        <email>seblu@archlinux.org</email>
+        <yborn>1984</yborn>
+    </quote>
+
+
+
 </root>
