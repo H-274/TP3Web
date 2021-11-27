@@ -27,6 +27,12 @@
     }
 }
 
+@keyframes dropdown {
+    0% {
+        transform: translateY(-500px);
+    }
+}
+
 /*   ANIMATIONS end   */
 
 /*   OTHER   */
@@ -63,6 +69,10 @@ body {
 }
 
 .img-click-animation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
     animation: img-boing 1.75s ease-in-out 0s 1 forwards;
 }
 
@@ -87,7 +97,6 @@ body {
 }
 
 #banner a img:hover {
-    position: absolute;
     animation: logo-spin 1.75s ease-in-out 0s 1 forwards;
 }
 
@@ -141,7 +150,7 @@ body {
     position: absolute;
     width: 100%;
     background-color: #1ac77a;
-    z-index: 100;
+    z-index: 99;
     display: none;
 }
 
@@ -159,6 +168,8 @@ body {
 
 .opened-dropdown {
     display: block;
+
+    animation: dropdown 1s ease-in-out 0s 1 alternate;
 }
 
 /*Drop-down end*/
@@ -245,9 +256,9 @@ body {
 /*   CONTENT   */
 .content {
     background-color: #005555;
-    position: relative;
+    position: static;
     width: 80%;
-    left: 10%;
+    margin-left: 10%;
     overflow: auto;
 }
 
@@ -304,6 +315,23 @@ footer p {
 
 /*   MEDIA QUERRIES   */
 @media only screen and (max-width: 992px) {
+    /*   ANIMATIONS   */
+    @keyframes img-boing {
+        40% {
+            width: 90%;
+        }
+        55% {
+            width: 100%;
+        }
+        75% {
+            width: 95%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    /*   ANIMATIONS end   */
+
     /*   OTHER   */
     body {
         background-color: darkcyan;
@@ -375,340 +403,3 @@ footer p {
 }
 
 /*   MEDIA QUERRIES end   */
-
-/*
-    Aide-mémoire:
-        Sélecteurs:
-            sel1,sel2{
-                (paramètres qui s'applique aux 2 sélecteurs)
-            }
-
-            sel1 sel2{
-                (paramètres qui s'appliquent aux enfants correspondants)
-            }
-
-            sel1+sel2{
-                (Permet d’appliquer un style sur tous les éléments de type sel2 de même niveau et suivant immédiatement un élément de type sel1)
-            }
-
-            sel1~sel2{
-                (Permet de d'affecter balises sel2 de même niveau/frêres balises sel1)
-            }
-
-            sel1>sel2{
-                (Permet d’appliquer un style sur tous les éléments de type sel2 qui sont enfants directs d’un élément de type sel1)
-            }
-
-            sel[attribut]{
-                (Permet d’appliquer un style sur tous les éléments de type)
-            }
-
-            sel[attribut="valeur"]{
-                (Permet d’appliquer un style sur tous les éléments de type)
-            }
-
-
-            Pseudo classes:
-                sel(généralement a):link{
-                    (Lien non-visité)
-                }
-
-                sel(généralement a):visited{
-                    (Lien quand visité)
-                }
-
-                sel(généralement a):hover{
-                    (Changer style quand souris est par dessus lien)
-                }
-
-                sel(généralement a):active{
-                    (Changer apparence lien quand on clic dessus)
-                }
-
-                sel:first-child{
-                    (Cible premier enfant de sel)
-                }
-
-                sel:last-child{
-                    (Cible dernier enfant sel)
-                }
-
-                sel:nth-child(NOMBRE/even/odd){
-                    (Cible enfant epmlacement spécifique, paire, impaire)
-                }
-
-
-            Pseudo éléments:
-                sel::first-letter{
-                    (Première lettre, QUE POUR BALISES TYPE BLOCK)
-                    (
-                        font: ;
-                        color: ;
-
-                        etc...
-                    )
-                }
-
-                sel::first-line{
-                    (Première ligne, QUE POUR BALISES TYPE BLOCK)
-                }
-
-                sel::selection{
-                    (Partie sélectionée pas utilisateur)
-                    (
-                        color: ;
-                        background: ;
-                        cursor: ;
-                        outline: ;
-                    )
-                }
-
-                sel::before{
-                    (Insérer/affecter contenu avant élément)
-                    (
-                        content: ; (Nécessaire pour ajout)
-                    )
-                }
-
-                sel::after{
-                    (Insérer/affecter contenu après élément)
-                    (
-                        content: ; (Nécessaire pour ajout)
-                    )
-                }
-
-
-
-        Paramètres:
-            background-colour: ;
-                Nom de couleur -> purple
-                Valeur hexa -> #069
-                Fonction RGBa -> RGBa(R, G, B, a)
-
-            background-image: ;
-                url ->
-                    url("DIR OU ADDRESSE WEB)
-                    url("DIR OU ADDRESSE WEB)
-
-            background-size: val1 val2;
-                (largeur, hauteur)Taille ->
-                    dimentions = nouvelle taille (px ou %)
-
-            background-repeat: ;
-                Répétition ->
-                    repeat = répétition (valeur de base)
-                    repeat-x = répète seulement horizontalement
-                    repeat-y = répète seulement verticalement
-                    no-repeat = pas répétition
-
-            background-attachment: ;
-                Fixe? ->
-                    fixed = fixé (reste en place)
-                    scroll = défile (suit défilement)
-
-            background-position: ;
-                Valeur ->
-                    MOTS CLÉS = si pas mentionné, "center" est donné de base
-                    X% Y% = position en pourcentage
-                    initial = set valeur à valeur de base
-
-            ////// POUR MULTIPLES IMAGES DANS PARAMÈTRES BACKGROUND //////
-
-            Pour ajouter 2e image, ajouter virgule et ensuite insérer valeurs pour 2e image et ainsi de suite.
-            Première image est en premier plan.
-
-            ////// POUR MULTIPLES IMAGES DANS PARAMÈTRES BACKGROUND //////
-
-            border: width style color
-                border-(top,right,bottom,left):
-                border-radius:
-                    border-(top,right,bottom,left)-(right-left)-radius
-                -alternatives
-                    border-style:
-                        style:
-                            -solid
-                            -dotted
-                            -dashed
-                            -double
-                            -groove
-                            -ridge
-                            -inset
-                            -outset
-                    border-width: width
-                    border-color: color
-
-            padding: width
-                padding-(left,right top down)
-
-            margin: top,right,bottom,left / auto (Must be block, defined width)
-                margin-(top,right,bottom,left)
-
-            box-shadow: horiz,vert,length of shadow,color,inset (optional, makes shadow inside)
-
-            display: type
-                type ->
-                    inline
-                    block
-                    inline-block
-                    none
-
-            position: type
-                type ->
-                    static
-                    relative: selon position originale
-                    fixed: toujours même endroit dans écran
-                    absolute: selon parent
-
-            (top/down/left/right): val
-                val ->
-                    Déplacement à partir de l'endroit mentionné
-
-            z-index: val
-                val ->
-                    Plus valeur élevée, plus priorité élevé edans chevauchement
-
-            float: pos
-                pos ->
-                    (top/bottom/left/right): colle conteneur au côté désigné du parent et fait agire comme un inline (avec autre float, sinon volle au-dessus)
-
-            clear: pos
-                pos ->
-                    (top/bottom/left/right): ignore le float spécifié
-
-            overflow: type
-                type ->
-                    visible
-                    hidden
-                    scroll
-                    auto
-
-
-
-        Mot-clés:
-            !important
-                -Pour forcer priorité
-        Règles:
-            @keyframes
-                -nom de la règle @keyframes permet de lier l’animation à l’élément
-                -peut spécifier plusieurs propriétés à modifier durant l’animation
-
-                //// EXEMPLE ////
-                @keyframes nom {
-                    from {propriété;}
-                    to {propriété;}
-                }
-
-                (ou)
-
-                @keyframes nom {
-                    x% {propriété;}
-                    y% {propriété;}
-                }
-
-                div {
-                    animation: nom xs;
-                }
-                //// EXEMPLE ////
-
-
-        Types (catégorie, pas balise):
-            block:
-                -Prend espace max(max = espace parent)
-                -Prend toute largeur
-                -ex:(<div></div>)
-
-            inline:
-                -Prend seulement l'espace nécessaire
-                -Prend uniquement largeur nécessaire
-                -ex:(<span></span>)
-        
-        Préfixes vendeurs:
-                -webkit- Safari & Chrome
-                -moz- Firefox
-                -ms- Microsoft browsers
-                -o- Opera
-
-        Animations:
-                transform:
-                    translate(xpx, ypx)
-                    rotate(xdeg)
-                    scale(x, y)
-                    skewX(xdeg)
-                    skewY(ydeg)
-                    skew(xdeg, ydeg)
-
-                    //// EXEMPLE ////
-                    sélecteur:hover {
-                        -vendeur-transform: translate(10px, 10px);
-                    }
-                    //// EXEMPLE ////
-
-                transition:
-                    transition: shorthand
-                        @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}usage: -vendeur-transition: transition_property transition_duration timing_function transition_delay, [autre transition];
-                    transition-property: définit la propriété à laquelle la transition doit s’appliquer (obligatoire)
-                    transition-duration: indique la durée de la transition en sec. (obligatoire)
-                    transition-timing-function: définit la courbe de vitesse de notre transition (opt)
-                        valaurs:
-                            Ease: Commence lentement puis accélère au milieu pour finir lentement
-                            Ease-in: Commence lentement
-                            Ease-out: Se termine lentement
-                            Ease-in-out: Commence et se finit lentement
-                            Linear: Même vitesse du début à la fin
-                    transition-delay: indique quand doit commencer la transition en sec (opt)
-
-                    ////Pour que la transition démarre, il faut que la propriété ciblée connaisse un changement de valeur ou d’état.////
-                    //// EXEMPLE ////
-                    sélecteur {
-                        -vendeur-transition-propterty: width;
-                        -vendeur-transition-duration: 5s;
-                        (ou)
-                        -vendeur-transition: width, 5s;
-                    }
-
-                    sélecteur:hover {
-                        width: 100px;
-                    }
-                    //// EXEMPLE ////
-
-                animation:
-                    animation: shorthand
-                        Usage: animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction, [autre animation];
-                    animation-name: nom de l’animation (utilisée dans le @keyframe) (obligatoire)
-                    animation-duration: durée de l’animation en sec. (obligatoire: si pas spécifié la valeur est 0 donc pas d’animation)
-                    animation-timing-function: courbe de vitesse de l’animation (opt)
-                        valeurs: 
-                            Ease: Commence lentement puis accélère au milieu pour finir lentement
-                            Ease-in: Commence lentement
-                            Ease-out: Se termine lentement
-                            Ease-in-out: Commence et se finit lentement
-                            Linear: Même vitesse du début à la fin
-                    animation-delay: délai avant le début de l’animation en sec. Peut être négatif. Si c’est le cas, l’animation commence comme si elle avait déjà joué ce nombre de secondes (opt)
-                    animation-iteration-count: nombre de fois que l’animation doit être jouée ou infinite (opt)
-                    animation-direction: sens de l’animation (opt)
-                        valeurs:
-                            Normal: Vers l’avant (forwards). Valeur par défaut
-                            Reverse: Vers l’arrière (backwards)
-                            Alternate: Vers l’avant puis vers l’arrière
-                            Alternate-reverse:Vers l’arrière puis vers l’avant
-
-                RWD (Responsive Web Design:
-                    Media Querries:
-                        @media mediatype and (media feature and|or|not mediafeature) {CSS-Code;}
-                            valeurs mediatype:
-                                all (tout périphériques)
-                                print (pour les imprimantes)
-                                screens (écrans)
-                                speech (pour lecteurs d'écrans)
-
-                        valeurs mediafeature:
-                            https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
-
-                        Points de rupture:
-                            Quand on fait usage de mdeia querries, créé un point de rupture
-                            ### Limiter usage de ruptures ###
-*/
