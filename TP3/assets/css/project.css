@@ -1,7 +1,30 @@
 /*   PAGE SPECIFIC   */
-#menu-button a {
+#project-button a {
     color: #005555;
     text-decoration: underline #005555;
+}
+
+table {
+    width: 100%;
+    color: #1ac77a;
+    font-size: 18px;
+    vert-align: middle;
+    font-family: 'Roboto', Arial;
+    border-top: 2px solid #1ac77a;
+
+    transition: all 1s ease-in;
+}
+
+table td:hover {
+    font-size: 1.15em;
+}
+
+table th:hover {
+    color: cyan;
+}
+
+table tr td:first-child {
+    text-align: center;
 }
 
 /*   PAGE SPECIFIC end   */

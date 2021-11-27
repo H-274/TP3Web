@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <!--Liaison avec feuille CSS-->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/project.css">
     <!--Font custom-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,27 +24,28 @@
             <!--Home button-->
             <li id="menu-button" class="header-buttons"><a href="index.html">Home</a>
                 <ul>
-                    <li><a href="index.html#content1">Option1</a></li>
-                    <li><a href="index.html#content2">Option2</a></li>
-                    <li><a href="index.html#content3">Option3</a></li>
+                    <li><a href="index.html#content1">About</a></li>
+                    <li><a href="index.html#content2">History</a></li>
                 </ul>
             </li>
             <!--Project button-->
             <li id="project-button" class="header-buttons"><a href="project.html">Project</a>
                 <ul>
-                    <li>Option1</li>
+                    <li><a href="project.html#content1">Install</a></li>
+                    <li><a href="project.html#content2">Usage</a></li>
+                    <li><a href="project.html#content3">Utilities</a></li>
                 </ul>
             </li>
             <!--Developers button-->
             <li id="devs-button" class="header-buttons"><a href="devs.html">Developers</a>
                 <ul>
-                    <li>Option1</li>
+                    <li><a href="devs.html#content1">List</a></li>
                 </ul>
             </li>
             <!--Contact us button-->
             <li id="contact-button" class="header-buttons"><a href="contact.html">Contact</a>
                 <ul>
-                    <li>Option1</li>
+                    <li><a href="contact.html#content1">Contact</a></li>
                 </ul>
             </li>
         </ul>
@@ -54,16 +55,16 @@
     <div id="dropdown" class="dropdown">
         <ul>
             <li>
-                <a>Home</a>
+                <a href="index.html">Home</a>
             </li>
             <li>
-                <a>Project</a>
+                <a href="project.html">Project</a>
             </li>
             <li>
-                <a>Developers</a>
+                <a href="devs.html">Developers</a>
             </li>
             <li>
-                <a>Contact</a>
+                <a href="contact.html">Contact</a>
             </li>
         </ul>
     </div>
@@ -71,59 +72,107 @@
 <body onresize="dropdown.className='dropdown'">
 <!--Space so that data isn't covered-->
 <div id="header-data-spacer"></div>
-<!--First data space (Text right image left)-->
-<div class="content content1" id="content1">
-    <figure>
-        <img src="assets/imgs/ALL/placeholer.png" alt="IMAGE À TROUVER"
-             onclick="this.classList.toggle('img-click-animation')"/>
-        <figcaption><a href="index.html">Source</a></figcaption>
-    </figure>
-    <p class="text-title">Title0</p>
+<div class="content content2" id="content1">
+    <p class="text-title">Step By Step Install :</p>
+    <ol>
+        <li>
+            <p>Dowload Arch Linux</p>
+            <p>Download Arch linux iso from <a href="https://archlinux.org/download/">https://archlinux.org/download/</a></p><br/>
+        </li>
+        <li>
+            <p>USB or DVD</p>
+            <p>Once The ISO is Downloaded you can create a live USB or burn it to a DVD</p><br/>
+        </li>
+        <li>
+            <p>Boot up Arch Linux</p>
+            <p>
+                With Arch Linux ISO burned on a DVD or stored as a live USB, insert the installation media into your computer and restart. Depending on your system, press F2, F10, or F12 lets you choose the device the system boots from. From There you can choose to boot your system on your DVD or your live USB.
+            </p><br/>
+        </li>
+    </ol>
+    <p>For the rest of the installation tutorial I advise you to go over to this website which contains an in depth installation guide: <a href="https://phoenixnap.com/kb/arch-linux-install">https://phoenixnap.com/kb/arch-linux-install</a></p>
+</div>
+<br/><br/><br/>
+<div id="content2" class="content content2">
+    <p class="text-title">Arch Linux Usage :</p>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget est dapibus, tempus nisi ac, venenatis
-        diam. Sed molestie sapien nec libero varius, quis rhoncus ipsum mollis. Praesent faucibus lorem sapien. Quisque
-        gravida, nisi ac semper euismod, dolor magna iaculis urna, eget vulputate est diam nec magna. Aliquam erat
-        volutpat. Etiam sed felis faucibus tortor euismod faucibus. Integer ultrices sagittis justo sit amet consequat.
-        Aenean fermentum tortor eros, et condimentum diam dignissim sit amet. Etiam sit amet interdum sapien, eget
-        laoreet est. Vestibulum posuere metus id ligula sodales ultricies. Aliquam nec ante quis lectus malesuada
-        rutrum. Ut viverra ligula id ultrices bibendum. Donec pretium ex vitae sapien feugiat blandit. Vivamus dui
-        mauris, hendrerit ut ultrices sed, molestie sit amet mi. Cras vel ligula augue.
+        Arch Linux is an independently developed, x86-64 general purpose GNU/Linux distribution versatile enough to suit any role. Development focuses on simplicity, minimalism, and code elegance. Arch is installed as a minimal base system, configured by the user upon which their own ideal environment is assembled by installing only what is required or desired for their unique purposes. GUI configuration utilities are not officially provided, and most system configuration is performed from the shell by editing simple text files. Arch strives to stay bleeding edge, and typically offers the latest stable versions of most software.<br/><br/>
+        Arch Linux uses its own Pacman package manager, which couples simple binary packages with an easy-to-use package build system. This allows users to easily manage and customize packages ranging from official Arch software to the user's own personal packages to packages from 3rd party sources. The repository system also allows users to easily build and maintain their own custom build scripts, packages, and repositories, encouraging community growth and contribution.<br/><br/>
+        The minimal Arch base package set resides in the streamlined [core] repository. In addition, the official [extra], [community], and [testing] repositories provide several thousand high-quality packages to meet your software demands. Arch also offers the Arch Linux User Repository (AUR), which contains more than 49,000 build scripts, for compiling installable packages from source using the Arch Linux makepkg application.<br/><br/>
+        Arch Linux uses a "rolling release" system which allows one-time installation and perpetual software upgrades. It is not generally necessary to reinstall or upgrade your Arch Linux system from one "version" to the next. By issuing one command, an Arch system is kept up-to-date and on the bleeding edge.<br/><br/>
+        Arch strives to keep its packages as close to the original upstream software as possible. Patches are applied only when necessary to ensure an application compiles and runs correctly with the other packages installed on an up-to-date Arch system.<br/><br/>
+        To summarize: Arch Linux is a versatile, and simple distribution designed to fit the needs of the competent Linux® user. It is both powerful and easy to manage, making it an ideal distro for servers and workstations. Take it in any direction you like. If you share this vision of what a GNU/Linux distribution should be, then you are welcomed and encouraged to use it freely, get involved, and contribute to the community. Welcome to Arch!
     </p>
 </div>
 <br/><br/><br/>
-<!--Second data space (Text, title centered)-->
-<div class="content content2" id="content2">
-    <p class="text-title">Title1</p>
+<div id="content3" class="content content2">
+    <p class="text-title">Core utilities :</p>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget est dapibus, tempus nisi ac, venenatis
-        diam. Sed molestie sapien nec libero varius, quis rhoncus ipsum mollis. Praesent faucibus lorem sapien. Quisque
-        gravida, nisi ac semper euismod, dolor magna iaculis urna, eget vulputate est diam nec magna. Aliquam erat
-        volutpat. Etiam sed felis faucibus tortor euismod faucibus. Integer ultrices sagittis justo sit amet consequat.
-        Aenean fermentum tortor eros, et condimentum diam dignissim sit amet. Etiam sit amet interdum sapien, eget
-        laoreet est. Vestibulum posuere metus id ligula sodales ultricies. Aliquam nec ante quis lectus malesuada
-        rutrum. Ut viverra ligula id ultrices bibendum. Donec pretium ex vitae sapien feugiat blandit. Vivamus dui
-        mauris, hendrerit ut ultrices sed, molestie sit amet mi. Cras vel ligula augue.
-    </p>
-</div>
-<br/><br/><br/>
-<!--Third data space (Text left, image right)-->
-<div id="content3" class="content content3">
-    <figure>
-        <img src="assets/imgs/ALL/placeholer.png" alt="IMAGE À TROUVER"
-             Onclick="this.classList.toggle('img-click-animation')"/>
-        <figcaption><a href="index.html">Source</a></figcaption>
-    </figure>
-    <p class="text-title">Title2</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget est dapibus, tempus nisi ac, venenatis
-        diam. Sed molestie sapien nec libero varius, quis rhoncus ipsum mollis. Praesent faucibus lorem sapien. Quisque
-        gravida, nisi ac semper euismod, dolor magna iaculis urna, eget vulputate est diam nec magna. Aliquam erat
-        volutpat. Etiam sed felis faucibus tortor euismod faucibus. Integer ultrices sagittis justo sit amet consequat.
-        Aenean fermentum tortor eros, et condimentum diam dignissim sit amet. Etiam sit amet interdum sapien, eget
-        laoreet est. Vestibulum posuere metus id ligula sodales ultricies. Aliquam nec ante quis lectus malesuada
-        rutrum. Ut viverra ligula id ultrices bibendum. Donec pretium ex vitae sapien feugiat blandit. Vivamus dui
-        mauris, hendrerit ut ultrices sed, molestie sit amet mi. Cras vel ligula augue.
-    </p>
+        Core utilities are the basic, fundamental tools of a GNU/Linux system. This article provides an incomplete overview of them, links their documentation and describes useful alternatives. The scope of this article includes, but is not limited to, the GNU coreutils. Most core utilities are traditional Unix tools (see Heirloom) and many were standardized by POSIX but have been developed further to provide more features.
+        Most command-line interfaces are documented in man pages, utilities by the GNU Project are documented primarily in Info manuals, some shells provide a help command for shell builtin commands. Additionally most utilities print their usage when run with the --help flag.<br/>
+        EXEMPLE :<br/><br/></p>
+
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>cd</td>
+            <td colspan="2">Change directory</td>
+        </tr>
+        <tr>
+            <td>ls</td>
+            <td colspan="2">List directory</td>
+        </tr>
+        <tr>
+            <td>cat</td>
+            <td>Concatenate files to stdout</td>
+            <td>$ cat [dir]</td>
+        </tr>
+        <tr>
+            <td>mdkir</td>
+            <td colspan="2">Make directory</td>
+        </tr>
+        <tr>
+            <td>rmdir</td>
+            <td>Remove empty directory</td>
+            <td>$ rmdir [dir]</td>
+        </tr>
+        <tr>
+            <td>rm</td>
+            <td colspan="2">Remove files or directories</td>
+        </tr>
+        <tr>
+             <td>cp</td>
+             <td colspan="2" rowspan="2">Copy/move files or directories</td>
+         </tr>
+        <tr>
+            <td>mv</td>
+        </tr>
+        <tr>
+            <td>ln</td>
+            <td colspan="2">Make hard or symbolic links</td>
+        </tr>
+        <tr>
+            <td>chown</td>
+            <td>Change file owner and group</td>
+            <td>$ chown [user] [file or dir]</td>
+        </tr>
+        <tr>
+            <td>chmod</td>
+            <td colspan="2">Change file permissions</td>
+        </tr>
+        <tr>
+            <td>dd</td>
+            <td colspan="2">Convert and copy a file</td>
+        </tr>
+        <tr>
+            <td>df</td>
+            <td colspan="2">Report file system disk space usage</td>
+        </tr>
+    </table>
 </div>
 <br/><br/><br/><br/>
 </body>

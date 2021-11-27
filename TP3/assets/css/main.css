@@ -33,6 +33,13 @@
     }
 }
 
+@keyframes link-hover {
+    50% {
+        color: red;
+    }
+
+}
+
 /*   ANIMATIONS end   */
 
 /*   OTHER   */
@@ -57,6 +64,10 @@ figcaption a {
 
 a {
     color: initial;
+}
+
+a:hover {
+    animation: link-hover 0.5s ease-in-out 0s infinite;
 }
 
 body {
@@ -179,7 +190,7 @@ body {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 148px;
+    left: 153px;
     padding: 10px;
     z-index: 100;
     list-style-type: none;
@@ -207,7 +218,7 @@ body {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 565px;
+    left: 598px;
     padding: 10px;
     z-index: 100;
     list-style-type: none;
@@ -221,7 +232,7 @@ body {
     background-color: #1ac77a; /*Other option: #1bd87a*/
     position: fixed;
     top: 100px;
-    left: 800px;
+    left: 801px;
     padding: 10px;
     z-index: 100;
     list-style-type: none;
@@ -272,14 +283,21 @@ body {
 }
 
 .content a:hover {
-    text-shadow: 0px 0px 5px black;
-    font-size: 20px;
+    text-shadow: 0 0 5px black;
+    font-size: 1.01em;
     color: white;
 }
 
 .text-title {
     font-size: 30px;
     font-weight: bolder;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.text-title:hover {
+    size: 1.1em;
+    transform: rotate(5deg);
 }
 
 .content1 figure {

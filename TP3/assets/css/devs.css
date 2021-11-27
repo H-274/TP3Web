@@ -1,7 +1,14 @@
 /*   PAGE SPECIFIC   */
-#menu-button a {
+#devs-button a {
     color: #005555;
     text-decoration: underline #005555;
+}
+
+.content p:last-child::first-letter {
+    font-size: 1em;
+    float: none;
+    font-weight: normal;
+    margin-right: 0px;
 }
 
 /*   PAGE SPECIFIC end   */
